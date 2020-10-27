@@ -1,0 +1,6 @@
+select (case when max(Salary)= 0 then 0
+        when max(Salary)='' then null
+            
+            else max(Salary) end) as SecondHighestSalary
+from Employee
+where Salary not in (Select max(Salary) from Employee ) ;
