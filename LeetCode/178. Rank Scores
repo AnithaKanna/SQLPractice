@@ -1,0 +1,2 @@
+select Score as score, Dense_Rank() Over(Order by Score desc) `Rank`
+from Scores
